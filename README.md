@@ -92,27 +92,12 @@ top_wear_result = gsp(top_wear_data, min_support)
 bottom_wear_result = gsp(bottom_wear_data, min_support)
 party_wear_result = gsp(party_wear_data, min_support)
 #Output the frequent sequential patterns for each category
-print("Frequent Sequential Patterns - Top Wear:")
-if top_wear_result:
- for pattern, support in top_wear_result.items():
- print(f"Pattern: {pattern}, Support: {support}")
-else:
- print("No frequent sequential patterns found in Top Wear.")
-print("\nFrequent Sequential Patterns - Bottom Wear:")
-if bottom_wear_result:
- for pattern, support in bottom_wear_result.items():
- print(f"Pattern: {pattern}, Support: {support}")
-else:
- print("No frequent sequential patterns found in Bottom Wear.")
-print("\nFrequent Sequential Patterns - Party Wear:")
-if party_wear_result:
- for pattern, support in party_wear_result.items():
- print(f"Pattern: {pattern}, Support: {support}")
-else:
- print("No frequent sequential patterns found in Party Wear.")
+print_table("Frequent Sequential Patterns - Top Wear", top_wear_result)
+print_table("Frequent Sequential Patterns - Bottom Wear", bottom_wear_result)
+print_table("Frequent Sequential Patterns - Party Wear", party_wear_result)
 ```
 ### Output:
-![WDM1](https://github.com/user-attachments/assets/ab8f627e-9347-48f8-a78e-9b3e89851305)
+![image](https://github.com/user-attachments/assets/9a1e833f-619d-47b6-9525-73e614da72fb)
 
 ### Visualization:
 ```python
